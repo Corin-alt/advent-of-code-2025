@@ -36,7 +36,6 @@ public class Day03 extends Day {
         int n = batteries.length();
         int toRemove = n - count;
 
-        // Use a greedy approach with a monotonic stack
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < n; i++) {
