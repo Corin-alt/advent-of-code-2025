@@ -11,7 +11,7 @@ public class FileReader {
     public static String readFile(String packagePath, String filename) {
         try {
             Path path = Paths.get("src/main/java/" + packagePath + "/" + filename);
-            return Files.readString(path);
+            return String.join(" ", Files.readAllLines(path));
         } catch (IOException e) {
             throw new RuntimeException("Error reading file: " + filename, e);
         }

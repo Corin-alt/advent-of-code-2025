@@ -30,7 +30,11 @@ public abstract class Day {
         System.out.println();
     }
 
+    protected String getContent() {
+        return input.trim();
+    }
+
     protected String[] getInputLines() {
-        return input.trim().split("\n");
+        return FileReader.readDayInputLines(dayNumber).toArray(new String[0]);
     }
 }
