@@ -35,4 +35,17 @@ public class FileReader {
         String dayFolder = String.format("fr/corentin/day%02d", day);
         return readLines(dayFolder, "input.txt");
     }
+
+    public static char[][] readDayInputAsGrid(int day) {
+        List<String> lines = readDayInputLines(day);
+        if (lines.isEmpty()) {
+            return new char[0][0];
+        }
+
+        char[][] grid = new char[lines.size()][];
+        for (int i = 0; i < lines.size(); i++) {
+            grid[i] = lines.get(i).toCharArray();
+        }
+        return grid;
+    }
 }

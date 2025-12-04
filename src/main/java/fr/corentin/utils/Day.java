@@ -37,4 +37,8 @@ public abstract class Day {
     protected String[] getInputLines() {
         return FileReader.readDayInputLines(dayNumber).toArray(new String[0]);
     }
+
+    protected char[][] getInputAsGrid() {
+        return FileReader.readDayInputAsGrid(dayNumber);
+    }
 }
