@@ -85,7 +85,7 @@ public class Day05 extends Day {
                         Math.max(current.max, next.max)
                 );
             } else {
-                // No overlap, add current range and move to next
+                // No overlap, add the current range and move to the next
                 merged.add(current);
                 current = next;
             }
